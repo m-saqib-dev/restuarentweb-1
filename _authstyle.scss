@@ -1,0 +1,114 @@
+#auth {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 99;
+    // #login-btn{    }
+    // #register-btn{    }
+    input{
+        padding: 1em;
+        border-radius: 10px;
+        box-shadow: inset 0 0 3px 0px red;
+        width: 100%;
+    }
+    .auth-btns {
+        padding: 0.4em 2em;
+        border: 2px solid white;
+        color: white;
+        margin: 0px 10px;
+        text-decoration: none;
+    }
+    .register {
+        background-color: white;
+        color: black;
+    }
+    .auth-btn{
+        grid-area: btn;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        padding: 1em;
+        background-color: red;
+        &:active {
+            animation: anim 0.1s forwards;
+        }
+        &:hover {
+            filter: contrast(60%);
+        }
+    }
+    #login-form{
+        display: none;
+        grid-template-areas: 
+        'close close'
+        'email pass'
+        'btn btn2';
+        input{
+            margin-bottom: 10px;
+        &:nth-child(1){
+               grid-area: email;
+        }
+        &:nth-child(2){
+                grid-area: pass;
+        }
+    }
+    .login-btn{
+        grid-area: btn2;
+        width: 40%;
+        place-self: end;
+    }
+    .forgot-btn{
+        grid-area: btn;
+        background: none;
+    }
+    margin-right: 80px;
+    }
+    #register-form{
+        display: none;
+        padding: 0em 1em;
+        margin-right: 80px;
+        place-items: center;
+        // grid-template-rows: 1fr 10px 1fr 10px 1fr 10px 1fr 10px;
+        grid-template-columns: 1fr 10px 1fr;
+        grid-template-areas: 'close close close'
+        'fname . lname'
+        '. . .'
+                    'email email email'
+                    '. . .'
+                    'pass pass pass'
+                    '. . .'
+                    'cpass cpass cpass'
+                    '. . .'
+                    'btn btn btn';            
+        input{
+            margin-bottom: 10px;
+            &:nth-child(1){
+                grid-area: fname;
+            }
+            &:nth-child(2){
+                grid-area: lname;
+            }
+            &:nth-child(3){
+                grid-area: email;
+            }
+            &:nth-child(4){
+                grid-area: pass;
+            }
+            &:nth-child(5){
+                grid-area: cpass;
+            }
+        }
+        .confirm{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+    .close{
+        text-decoration: none;
+        grid-area: close;
+        text-shadow: 0 0 3px black;
+        color: white;
+        font-size: 1em;
+        place-self:  end;
+        padding: 20px;
+    }
+}
