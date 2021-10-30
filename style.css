@@ -78,6 +78,7 @@ body {
 #auth #login-form .login-btn {
   grid-area: btn2;
   width: 100%;
+  place-self: center;
 }
 
 #auth #login-form .forgot-btn {
