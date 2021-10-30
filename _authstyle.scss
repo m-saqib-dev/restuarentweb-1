@@ -53,7 +53,7 @@
     }
     .login-btn{
         grid-area: btn2;
-        width: 40%;
+        width: fit-content;
         place-self: end;
     }
     .forgot-btn{
