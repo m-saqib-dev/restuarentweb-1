@@ -1,0 +1,39 @@
+#drawer-content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+#drawer-menu{
+    display: none;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    padding: 30px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    transition: left 1s;
+}
+
+.toggle-btn{
+    margin: 30px 50px;
+    position: fixed;
+    right: 0;
+    cursor: pointer;
+    justify-content: flex-end;
+    background-color: black;
+    z-index: 30;
+    .close-menu{
+        position: absolute;
+        display: none;
+    }
+    .open-menu{
+        position: absolute;
+        display: block;
+    }
+}

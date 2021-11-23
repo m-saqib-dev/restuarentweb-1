@@ -1,0 +1,10 @@
+@media screen and (max-width:720px) {
+    #auth{
+        display: none;
+    }
+    .container{
+        #drawer-menu{
+            display: flex;
+        }
+    }
+}
